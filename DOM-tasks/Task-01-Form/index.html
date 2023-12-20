@@ -1,41 +1,82 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Feedback Form</title>
-    <link rel="stylesheet" href="./assets/main.css">
-  </head>
-  <body class="bg-purple-800">
-    
 
-    <div class="bg-violet-200 max-w-2xl mx-auto px-4  rounded">
-      <h2 class="text-center mt-20 mb-5 pt-5 font-serif text-xl">Your Feedback </h2>
-    <form>
-      <div>
-        <div class="yourName">
-          <input type="text" placeholder="Name" class="w-full mb-4 rounded p-2 outline-none font-serif">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form</title>
+  <!--stylesheet-->
+  <link rel="stylesheet" href="./assets/main.css">
+</head>
+
+<body class="bg-purple-800">
+
+  <!--Feedback form-->
+  <div class="bg-violet-200 max-w-2xl mx-auto px-4  rounded">
+    <h2 class="text-center mt-20 mb-5 pt-5 font-serif text-xl"> Feedback Form
+    </h2>
+    <form name="feedback">
+      <div class>
+        <!--username-->
+        <div>
+          <input type="text" name="fullName" placeholder="Name" required class="w-full mb-4 rounded p-2 outline-none font-serif pl-4">
         </div>
-        <div class="yourEmail">
-          <input type="text" placeholder="Email" class="w-full mb-4 rounded p-2 outline-none font-serif">
+        <!--user email-->
+        <div>
+          <input type="text" name="email" placeholder="Email" required class="w-full mb-4 rounded p-2 outline-none font-serif pl-4">
         </div>
-        <div class="yourSubject">
-          <input type="text" placeholder="Subject" class="w-full mb-4 rounded p-2 outline-none font-serif">
+        <!--subjects-->
+        <div>
+          <input type="text" name="subject" placeholder="Subject" required class="w-full mb-4 rounded p-2 outline-none font-serif pl-4">
         </div>
-        <div class="yourMessage">
-          <textarea placeholder="Message" class="w-full mb-4 rounded p-2 outline-none font-serif" rows="4"></textarea>
+        <div class="font-serif text-gray-500 mb-4 px-4">
+          <div class="m-1">
+
+            <input type="radio" name="type" id="Physics" required value="Physics">
+            <label for="Physics">Physics</label>
+          </div>
+          <div class="m-1">
+            <input type="radio" name="type" id="Chemistry" required value="Chemistry">
+            <label for="Chemistry">Chemistry</label>
+
+          </div>
+          <div class="m-1">
+            <input type="radio" name="type" id="Biology" required value="Biology"> <label for="Biology">Biology</label>
+          </div>
+          <div class="m-1">
+            <input type="radio" name="type" id="Mathematics" required value="Mathematics"> <label
+              for="Mathematics">Mathematics</label>
+          </div>
+          <div class="m-1">
+            <input type="radio" name="type" id="Computer Science" required value="Computer Science"> <label
+              for="Computer Science">Computer Science</label>
+          </div>
         </div>
+
+
+
       </div>
-      <button class="bg-purple-300 mb-4 w-full p-2 rounded hover:bg-purple-400 cursor-pointer font-serif text-xl" >Submit</button>
+      <!--feedback message-->
+      <div>
+        <textarea placeholder="Enter your feedback briefly" required name="message"
+          class="w-full mb-4 rounded p-2 outline-none font-serif pl-4" rows="4"></textarea>
+      </div>
+      <!--submit button-->
+      <div>
+        <button
+          class="bg-purple-300 mb-4 w-full p-2 rounded hover:bg-purple-400 cursor-pointer font-serif text-xl">Submit</button>
+      </div>
   </div>
-    
   </div>
-    </form>
-    
-    
-    
-  
-    
-    <script src="./assets/main.js" type="module"></script>
-  </body>
+
+
+  </form>
+
+
+
+
+
+  <script src="./assets/main.js" type="module"></script>
+</body>
+
 </html>
