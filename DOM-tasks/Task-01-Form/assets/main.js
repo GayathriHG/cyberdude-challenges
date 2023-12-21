@@ -12,6 +12,7 @@ const btnEl=document.querySelector("form button")
 
 const handleSubmit=(event)=>{
   event.preventDefault();
+  alert("Thank you for your feedback!")
 
   // const{fullName,email,subject,type,message}=formEl.elements;
 
