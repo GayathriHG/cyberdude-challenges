@@ -9,17 +9,26 @@ const btnEl=document.querySelector("form button")
 
  //get elements by object destructing
 
-const{fullName,email,subject,type,message}=formEl.elements;
-if(radioButton.checked) {
-    subject.value = labelName
-  }
 
-formEl.addEventListener ("submit",(event)=>{
-    event.preventDefault();
+const handleSubmit=(event)=>{
+  event.preventDefault();
 
-    const formData=new FormData(formEl);
-    const{fullName,email,subject,type,message}=formEl.elements;
-  
-    console.log("form has been submitted");
-});
+  // const{fullName,email,subject,type,message}=formEl.elements;
+
+  console.log(...new FormData(formEl));
+
+};
+
+// const handleFormData=(e)=>{
+
+  // const formData=e.formData
+  // console.log([...formData.values()]);
+
+// }
+
+formEl.addEventListener ("submit",handleSubmit);
+
+// formEl.addEventListener("formdata",handleFormData);
+ 
+
 
