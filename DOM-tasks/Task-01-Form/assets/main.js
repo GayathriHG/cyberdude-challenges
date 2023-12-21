@@ -1,9 +1,13 @@
 
 //get from by name
 const formEl=document.forms.feedback;
+const typeEl=formEl.elements.type
+console.log([...typeEl]);
 
 // get button by queryselector
 const btnEl=document.querySelector("form button")
+const optionsEl=document.querySelector("#options")
+console.log(optionsEl);
 
 
 
@@ -17,6 +21,7 @@ const handleSubmit=(event)=>{
   // const{fullName,email,subject,type,message}=formEl.elements;
 
   console.log(...new FormData(formEl));
+  
 
 };
 
@@ -30,6 +35,14 @@ const handleSubmit=(event)=>{
 formEl.addEventListener ("submit",handleSubmit);
 
 // formEl.addEventListener("formdata",handleFormData);
+
+optionsEl.addEventListener ("change",(e)=>{
+console.log(e.target.value);
+
+const subjectEl=formEl.subject;
+subjectEl.value=e.target.value;
+
+});
  
 
 
