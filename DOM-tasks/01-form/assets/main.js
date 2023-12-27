@@ -13,13 +13,18 @@ const optionsEl = document.querySelector("#options");
 const handleSubmit = (event) => {
   event.preventDefault();
 
-  const { fullName, email, subject, type, message } = formEl.elements;
+  const { fullName, email, subject, message } = formEl.elements;
 
   const formData=new FormData(formEl);
   formData.delete("type");
   for(let entry of formData.entries()){
-    console.log(entry);
+  
+    console.log(...entry);
+
   }
+
+  
+
 
 
 
