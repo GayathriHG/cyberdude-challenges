@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furfect pets</title>
+  <link rel="stylesheet" href="./assets/main.css">
+</head>
+
+<body class="bg-amber-100">
+
+  <div class=" max-w-6xl mx-auto mt-20 flex bg-gray-500 rounded">
+    <div class="split left opacity-40">
+      <img src="./assets/pictures/photo 1.jpg" alt="banner" class=" rounded ">
+
+    </div>
+    <div class="split right ">
+      <div class="text-blue-900 flex items-center text-center px-20 mt-8">
+        <div>
+          <img src="./assets/pictures/photo 3.jpg" alt="logo" class="w-12 h-12 rounded-full">
+        </div>
+        <div>
+          <h2 class="font-bold text-3xl px-2 ">
+            Happy Pets Healthy Pets
+          </h2>
+        </div>
+
+      </div>
+      <form>
+        <div class=" grid grid-flow-col auto-cols-max space-x-10 px-10 mt-8 mx-10">
+
+          <div>
+            <input type="text" placeholder="Pet's name" class="rounded px-6 py-2  outline-none w-full">
+
+          </div>
+          <div class>
+            <select name="Breed" id="breed" class="px-4 py-2  rounded outline-none w-full">
+              <option value="Cannine">Cannine</option>
+              <option value="Feline">Feline</option>
+            </select>
+          </div>
+          <div>
+            <input type="number" placeholder="Age" class="rounded px-4 py-2  outline-none">
+          </div>
+        </div>
+        <div class="grid grid-flow-col auto-cols-max space-x-10 px-10 mt-8 mx-10">
+          <div>
+            <input type="text" placeholder="Specify the breed" class="rounded px-6 py-2  outline-none">
+          </div>
+          <div class>
+            <select name="Gender" id="gender" class="px-5 py-2 rounded outline-none w-full">
+              <option value="Male">Male</option>
+              <option value="Female ">Female</option>
+
+            </select>
+          </div>
+          <div>
+            <input type="number" placeholder="Weight in KG's" class="rounded  px-4 py-2  outline-none">
+          </div>
+        </div>
+
+
+
+
+
+        <div class=" grid grid-flow-col auto-cols-max space-x-10 px-10 mt-8 mx-10">
+          <div>
+            <input type="number" placeholder="Your contact number" class="rounded px-6 py-2  outline-none">
+          </div>
+          <div>
+            <input type="datetime-local" class="rounded px-4 py-1.5 outline-none">
+          </div>
+
+        </div>
+
+        <div class="px-10 mt-8 mx-10 rounded">
+          <textarea name="" placeholder="Reason for Checkup" id="message" cols="60" rows="4"
+            class="rounded px-4 py-2  outline-none"></textarea>
+        </div>
+        <div class="text-center bg-blue-600 rounded mt-8 hover:bg-gray-400 cursor-pointer mx-20">
+          <button class="py-2 font-semibold text-lg width=80 ">Book your Appointment</button>
+        </div>
+
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <div class="my-10 px-4">
+    <table class="table table-fixed border  w-full text-center ">
+      <tr>
+        <th class="px-2 py-1 border w-14">S.no</th>
+        <th class="px-2 py-1 border">Pet's name</th>
+        <th class="px-2 py-1 border">Type</th>
+        <th class="px-2 py-1 border">Age</th>
+        <th class="px-2 py-1 border">Breed</th>
+        <th class="px-2 py-1 border">Gender</th>
+        <th class="px-2 py-1 border">Weight in KG</th>
+        <th class="px-2 py-1 border">Your Contact</th>
+        <th class="px-2 py-1 border">Date & Time</th>
+        <th class="px-2 py-1 border">Reason</th>
+        
+      </tr>
+      <tr>
+        <td>1</td>
+        <td class="px-2 py-1 border">Lucy</td>
+        <td class="px-2 py-1 border">Feline</td>
+        <td class="px-2 py-1 border">4</td>
+        <td class="px-2 py-1 border">Indie</td>
+        <td class="px-2 py-1 border">Female</td>
+        <td class="px-2 py-1 border">10</td>
+        <td class="px-2 py-1 border">8892621218</td>
+        <td class="px-2 py-1 border">1 Jan 2024 12pm</td>
+        <td class="px-2 py-1 border">Motions</td>
+        <td class="px-2 py-1 border">
+          <button>Edit</button>
+        </td>
+        <td class="px-2 py-1 m-2 border bg-red-500 rounded">
+          <button class="">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <script type="module" src="./assets/main.js"></script>
+</body>
+
+</html>
