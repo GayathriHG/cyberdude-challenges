@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="./public/pictures/photo 3.jpg" />
+  <link rel="icon" type="image/svg+xml" href="./assets/photo3-iZVZ1Uzd.jpg" />
   <title>Furfect pets</title>
-  <script type="module" crossorigin src="./assets/index-tAFImivq.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-KyiNWOZ1.css">
+  <script type="module" crossorigin src="./assets/index-TvlKI2Hz.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-AmRPbR_H.css">
 </head>
 
 <body class="bg-amber-100 font-serif">
@@ -105,12 +105,11 @@
   </div>
   <!--output table-->
 
-  <div class="my-10">
-    <div class="text-2xl text-fuchsia-800 px-4 text-center">
-      <h2>Patient's List</h2>
-    </div>
-    <div class="my-1 mx-4 space-y-5" >
-      <table class="table table-fixed border bg-gray-400 w-full text-center " id="petTable">
+  
+    
+    <div class="my-10 mx-4 space-y-5 hidden " id="petCard"  >
+      <h2 class="text-2xl text-fuchsia-800 px-4 text-center">Patient's List</h2>
+      <table class="table table-fixed border bg-gray-400 w-full text-center " >
         <tr>
           <th class="px-2 py-1 border ">Pet's name</th>
           <th class="px-2 py-1 border">Gender</th>
@@ -121,7 +120,7 @@
           <th class="px-2 py-1 border "></th>
           <th class="px-2 py-1 border "></th>
         </tr>
-        <!-- <tbody id="appointmentList"></tbody> -->
+        <tbody id="petTable"></tbody>
         <!-- <tr>
           <td class="px-2 py-2 border">Lucy</td>
           <td class="px-2 py-2 border">Female</td>
@@ -139,7 +138,7 @@
         </tr> -->
       </table>
     </div>
-  </div>
+  
 
 
   <!--Javascript-->

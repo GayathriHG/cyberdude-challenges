@@ -105,7 +105,12 @@ function getAllDatas(){
 
  const storedDataArr= JSON.parse(storedData);
 
- if(storedData){
+ const petCardTable=document.getElementById("petCard");
+
+ if(storedDataArr && storedDataArr.length>0){
+petCardTable.classList.remove("hidden");
+
+
 
  
 
@@ -143,6 +148,7 @@ const finalData=storedDataArr.map(storedData=>{
 tableEl.innerHTML+=finalData;
 
 }else{
+  petCardTable.classList.add("hidden")
   console.log("No appointments yet!");
 }
 }
