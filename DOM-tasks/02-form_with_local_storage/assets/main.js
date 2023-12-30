@@ -84,7 +84,7 @@ validateForm.onSuccess((e) => {
   //parse the string into JS vlaue
   const existingAppointmentArray = JSON.parse(existingAppointmentData);
   const newAppointmentData = [];
-  console.log(existingAppointmentArray);
+  
 
   if (existingAppointmentArray) {
     // create new array and push existing value to it
@@ -176,6 +176,10 @@ trEl.append(
 finalValues.push(trEl);
 
 
+finalValues.forEach(()=>{
+  tableEl.append();
+});
+console.log(finalValues);
 
 
 });
@@ -189,6 +193,8 @@ finalValues.push(trEl);
 
 
 
+}else{
+  console.log("Appointment not scheduled");
 }
 
 
