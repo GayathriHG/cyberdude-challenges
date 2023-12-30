@@ -1,188 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="./assets/pictures/photo 3.jpg"
-    />
-    <title>Furfect pets</title>
-    <link rel="stylesheet" href="./assets/main.css" />
-  </head>
 
-  <body class="bg-amber-100 font-serif">
-    <h2 class="text-center text-4xl py-6">Furfect Pets💖</h2>
-    <div class="max-w-6xl mx-auto flex bg-purple-300 rounded">
-      <!--photo-->
-      <div class="split left w-[450px] items-center">
-        <img
-          src="./assets/pictures/photo 1.jpg"
-          alt="banner"
-          class="rounded-l h-[750px] bg-cover"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="./assets/pictures/photo 3.jpg" />
+  <title>Furfect pets</title>
+  <link rel="stylesheet" href="./assets/main.css" />
+</head>
+
+<body class="bg-amber-100 font-serif">
+  <h2 class="text-center text-4xl py-6">Furfect Pets💖</h2>
+  <div class="max-w-6xl mx-auto flex bg-purple-300 rounded">
+    <!--photo-->
+    <div class="split left w-[450px] items-center">
+      <img src="./assets/pictures/photo 1.jpg" alt="banner" class="rounded-l h-[750px] bg-cover" />
+    </div>
+    <div class="split right flex-1">
+      <div class="flex items-center text-center mx-10 mt-10 px-10">
+        <!--logo-->
+        <div>
+          <img src="./assets/pictures/photo 3.jpg" alt="logo" class="w-12 h-12 rounded-full" />
+        </div>
+        <!--heading-->
+        <div>
+          <h2 class="font-bold text-3xl mx-4 text-fuchsia-800">
+            Happy Pets Healthy Pets
+          </h2>
+        </div>
       </div>
-      <div class="split right flex-1">
-        <div class="flex items-center text-center mx-10 mt-10 px-10">
-          <!--logo-->
+      <!--form start-->
+      <form id="book-appointment-form" method="post" class="pb-10">
+        <!--name-->
+        <div class="grid grid-cols-2 gap-2 space-x-10 mt-10 mx-10">
           <div>
-            <img
-              src="./assets/pictures/photo 3.jpg"
-              alt="logo"
-              class="w-12 h-12 rounded-full"
-            />
+            <input type="text" placeholder="Pet's name" required id="name" name="name"
+              class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800" />
           </div>
-          <!--heading-->
+          <!--gender-->
           <div>
-            <h2 class="font-bold text-3xl mx-4 text-fuchsia-800">
-              Happy Pets Healthy Pets
-            </h2>
+            <select name="gender" id="gender"
+              class="px-2 py-2.5 rounded outline-none w-full border focus:outline-none focus:border-fuchsia-800">
+              <option value="">Choose an option</option>
+              <option value="Male">Male</option>
+              <option value="Female ">Female</option>
+            </select>
           </div>
         </div>
-        <!--form start-->
-        <form id="book-appointment-form" method="post" class="pb-10">
-          <!--name-->
-          <div class="grid grid-cols-2 gap-2 space-x-10 mt-10 mx-10">
-            <div>
-              <input
-                type="text"
-                placeholder="Pet's name"
-                required
-                id="name"
-                name="name"
-                class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800"
-              />
-            </div>
-            <!--gender-->
-            <div>
-              <select
-                name="gender"
-                id="gender"
-                class="px-2 py-2.5 rounded outline-none w-full border focus:outline-none focus:border-fuchsia-800"
-              >
-                <option value="">Choose an option</option>
-                <option value="Male">Male</option>
-                <option value="Female ">Female</option>
-              </select>
-            </div>
+        <!--breed-->
+        <div class="grid grid-cols-2 gap-2 space-x-10 mt-10 mx-10">
+          <div>
+            <input type="text" placeholder="Specify the breed" id="breed" name="breed"
+              class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800" />
           </div>
-          <!--breed-->
-          <div class="grid grid-cols-2 gap-2 space-x-10 mt-10 mx-10">
-            <div>
-              <input
-                type="text"
-                placeholder="Specify the breed"
-                id="breed"
-                name="breed"
-                class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800"
-              />
-            </div>
-            <!--type-->
-            <div>
-              <select
-                name="type"
-                id="type"
-                class="px-2 py-2.5 rounded outline-none w-full border focus:outline-none focus:border-fuchsia-800"
-              >
-                <option value="">Choose an option</option>
-                <option value="Cannine">Cannine</option>
-                <option value="Feline">Feline</option>
-              </select>
-            </div>
+          <!--type-->
+          <div>
+            <select name="type" id="type"
+              class="px-2 py-2.5 rounded outline-none w-full border focus:outline-none focus:border-fuchsia-800">
+              <option value="">Choose an option</option>
+              <option value="Cannine">Cannine</option>
+              <option value="Feline">Feline</option>
+            </select>
           </div>
-          <!--age-->
-          <div class="grid grid-cols-2 gap-2 space-x-10 mt-10 mx-10">
-            <div>
-              <input
-                type="number"
-                placeholder="Age"
-                name="age"
-                id="age"
-                required
-                class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800"
-              />
-            </div>
-            <!--weight-->
-            <div>
-              <input
-                type="number"
-                placeholder="Weight in KG's"
-                name="weight"
-                id="weight"
-                class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800"
-              />
-            </div>
+        </div>
+        <!--age-->
+        <div class="grid grid-cols-2 gap-2 space-x-10 mt-10 mx-10">
+          <div>
+            <input type="number" placeholder="Age" name="age" id="age" required
+              class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800" />
           </div>
-          <!--contact number-->
-          <div class="grid grid-cols-2 gap-2 space-x-10 mt-10 mx-10">
-            <div>
-              <input
-                type="number"
-                placeholder="Your contact number"
-                name="mobile"
-                id="mobile"
-                required
-                class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800"
-              />
-            </div>
-            <!--date and time-->
-            <div>
-              <input
-                type="datetime-local"
-                class="px-2 py-1.5 rounded w-full border focus:outline-none focus:border-fuchsia-800"
-                required
-                id="date"
-                name="date"
-              />
-            </div>
+          <!--weight-->
+          <div>
+            <input type="number" placeholder="Weight in KG's" name="weight" id="weight"
+              class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800" />
           </div>
-          <!--textarea-->
-          <div class="px-10 mt-10 rounded">
-            <textarea
-              name="reason"
-              placeholder="Reason for Checkup"
-              id="message"
-              cols="60"
-              rows="4"
-              class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800"
-            ></textarea>
+        </div>
+        <!--contact number-->
+        <div class="grid grid-cols-2 gap-2 space-x-10 mt-10 mx-10">
+          <div>
+            <input type="number" placeholder="Your contact number" name="mobile" id="mobile" required
+              class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800" />
           </div>
-          <!--submit button-->
-          <div
-            class="text-center bg-fuchsia-700 rounded mt-10 hover:bg-fuchsia-500 cursor-pointer mx-10 text-gray-100"
-          >
-            <button class="px-4 py-2" type="submit">
-              Book your Appointment
-            </button>
+          <!--date and time-->
+          <div>
+            <input type="datetime-local"
+              class="px-2 py-1.5 rounded w-full border focus:outline-none focus:border-fuchsia-800" required id="date"
+              name="date" />
           </div>
-        </form>
-      </div>
+        </div>
+        <!--textarea-->
+        <div class="px-10 mt-10 rounded">
+          <textarea name="reason" placeholder="Reason for Checkup" id="message" cols="60" rows="4"
+            class="rounded px-2 py-2 outline-none w-full border focus:outline-none focus:border-fuchsia-800"></textarea>
+        </div>
+        <!--submit button-->
+        <div class="text-center bg-fuchsia-700 rounded mt-10 hover:bg-fuchsia-500 cursor-pointer mx-10 text-gray-100">
+          <button class="px-4 py-2" type="submit">
+            Book your Appointment
+          </button>
+        </div>
+      </form>
     </div>
-    <!--output table-->
-    
-          <div class="my-10 ">
-      <div class="text-2xl text-fuchsia-800 px-4 text-center">
-        <h2>Patient's List</h2>
-      </div>
-      <div class="my-1 mx-4 space-y-5" id="appointments">
-        <table class="table table-fixed border w-full text-center bg-slate-300">
-          <tr>
-            <th class="px-2 py-1 border w-14">S.no</th>
-            <th class="px-2 py-1 border">Pet's name</th>
-            <th class="px-2 py-1 border">Gender</th>
-            <th class="px-2 py-1 border">Type</th>
-            <th class="px-2 py-1 border">Age</th>
-            <th class="px-2 py-1 border">Contact no.</th>
-            <th class="px-2 py-1 border">Date & Time</th>
-          </tr>
-          <tbody id="appointmentList"></tbody>
-        </table>
-      </div>
-    </div>
-    
+  </div>
+  <!--output table-->
 
-    <!--Javascript-->
-    <script type="module" src="./assets/main.js"></script>
-  </body>
+  <div class="my-10">
+    <div class="text-2xl text-fuchsia-800 px-4 text-center">
+      <h2>Patient's List</h2>
+    </div>
+    <div class="my-1 mx-4 space-y-5" >
+      <table class="table table-fixed border bg-gray-400 w-full text-center " id="petTable">
+        <tr>
+          <th class="px-2 py-1 border ">Pet's name</th>
+          <th class="px-2 py-1 border">Gender</th>
+          <th class="px-2 py-1 border ">Type</th>
+          <th class="px-2 py-1 border ">Age</th>
+          <th class="px-2 py-1 border ">Contact no.</th>
+          <th class="px-2 py-1 border ">Date & Time</th>
+          <th class="px-2 py-1 border "></th>
+          <th class="px-2 py-1 border "></th>
+        </tr>
+        <!-- <tbody id="appointmentList"></tbody> -->
+        <!-- <tr>
+          <td class="px-2 py-2 border">Lucy</td>
+          <td class="px-2 py-2 border">Female</td>
+          <td class="px-2 py-2 border">Feline</td>
+          <td class="px-2 py-2 border">4</td>
+          <td class="px-2 py-2 border">8892621218</td>
+          <td class="px-2 py-2 border">01 Jan 2024,11 am</td>
+          <td class="px-2 py-2 border"><button class="px-6 py-2 bg-fuchsia-600 rounded">
+              Edit
+            </button>
+          </td>
+          <td class="px-2 py-2 border">
+            <button class="px-6 py-2 rounded bg-red-600">Cancel</button>
+          </td>
+        </tr> -->
+      </table>
+    </div>
+  </div>
+
+
+  <!--Javascript-->
+  <script type="module" src="./assets/main.js"></script>
+</body>
+
 </html>

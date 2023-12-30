@@ -4,7 +4,6 @@ import JustValidate from "just-validate";
 // get form by Id
 const formEl = document.getElementById("book-appointment-form");
 
-const localStorageKey = "appointmentData";
 const validateForm = new JustValidate(formEl);
 
 // validation of form elements
@@ -73,31 +72,28 @@ validateForm.addField("#date", [
   },
 ]);
 
-validateForm.onSuccess((e) => {
+validateForm.onSuccess(() => {
   const formData = new FormData(formEl);
 
-  const formValueObj = Object.fromEntries(formData.entries());
+  const formObj = Object.fromEntries(formData.entries());
 
-  //get existing values fron local storage
-  const existingAppointmentData = localStorage.getItem(localStorageKey);
+  // get value from local storage
+  const storedPetData = localStorage.getItem("petData");
 
-  //parse the string into JS vlaue
-  const existingAppointmentArray = JSON.parse(existingAppointmentData);
-  const newAppointmentData = [];
-  
+  const newPetData = [];
 
-  if (existingAppointmentArray) {
-    // create new array and push existing value to it
-    existingAppointmentArray.push(formValueObj);
+  // parse the value into JS value
 
-    localStorage.setItem(
-      localStorageKey,
-      JSON.stringify(existingAppointmentArray)
-    );
+  const storedPetArray = JSON.parse(storedPetData);
+
+  if (storedPetArray) {
+    storedPetArray.push(formObj);
+
+    localStorage.setItem("petData", JSON.stringify(storedPetArray));
   } else {
-    newAppointmentData.push(formValueObj);
+    newPetData.push(formObj);
 
-    localStorage.setItem(localStorageKey, JSON.stringify(newAppointmentData));
+    localStorage.setItem("petData", JSON.stringify(newPetData));
   }
 
   alert("Appointment scheduled successfully");
@@ -105,100 +101,55 @@ validateForm.onSuccess((e) => {
 });
 
 function getAllDatas(){
-  const existingData=localStorage.getItem(localStorageKey);
- const existingArray= JSON.parse(existingData);
+  const storedData=localStorage.getItem("petData");
 
-const tableEl=document.getElementById("appointments");
-if(existingArray && existingArray.length >0){
-  tableEl.classList.remove("hidden");
-  const outPutEl=document.getElementById("appointmentList");
-  outPutEl.innerHTML="";
-  const finalValues=[];
+ const storedDataArr= JSON.parse(storedData);
 
-existingArray.map(function(value){
-  const trEl=document.createElement("tr");
-  const td1El=document.createElement("td");
-  const td2El=document.createElement("td");
-  const td3El=document.createElement("td");
-  const td4El=document.createElement("td");
-  const td5El=document.createElement("td");
-  const td6El=document.createElement("td");
-  const td7El=document.createElement("td");
-  const td8El=document.createElement("td");
+ if(storedData){
+
+ 
+
+const tableEl= document.getElementById('petTable');
 
 
-const delBtnEl=document.createElement("button");
-
-const editBtnEl=document.createElement("button")
-
-td1El.classList.add("px-2", "py-1", "border");
-td1El.textContent=value.petsName;
-
-td2El.classList.add("px-2", "py-1", "border");
-td2El.textContent=value.gender;
-
-td3El.classList.add("px-2", "py-1", "border");
-td3El.textContent=value.type;
-
-td4El.classList.add("px-2", "py-1", "border");
-td4El.textContent=value.age;
-
-td5El.classList.add("px-2", "py-1", "border");
-td5El.textContent=value.contactNo;
-
-td6El.classList.add("px-2", "py-1", "border");
-td6El.textContent=value.timeDate;
-
-td7El.classList.add("px-2", "py-1","bg-violet-400", "border");
-td7El.append(editBtnEl);
-editBtnEl.textContent="Edit";
-
-td8El.classList.add("px-2", "py-1","bg-red-400", "border");
-td8El.append(delBtnEl);
-delBtnEl.textContent="Cancel";
-
-delBtnEl.addEventListener("click",(e)=>{
-  cancelAppointment(value);
-});
-
-trEl.append(
-  td1El,
-  td2El,
-  td3El,
-  td4El,
-  td5El,
-  td6El,
-  td7El,
-  td8El,
-
-);
-
-finalValues.push(trEl);
-
-
-finalValues.forEach(()=>{
-  tableEl.append();
-});
-console.log(finalValues);
-
-
-});
+const finalData=storedDataArr.map(storedData=>{
+  return`
+  <tr>
+  <td class="px-2 py-2 border ">${storedData.name}</td>
+  <td class="px-2 py-2 border ">${storedData.gender}</td>
+  <td class="px-2 py-2 border ">${storedData.type}</td>
+  <td class="px-2 py-2 border ">${storedData.age}</td>
+  <td class="px-2 py-2 border ">${storedData.mobile}</td>
+  <td class="px-2 py-2 border ">${storedData.date}</td>
+  
+  
+  <td class="px-2 py-2 border "><button class="px-6 py-2 bg-fuchsia-600 rounded">
+  Edit
+  </button>
+  </td>
+  
+  <td class="px-2 py-2 border "><button class="px-6 py-2 rounded bg-red-600">Cancel</button>
+  </td>
+  </tr>
+  
+  `;
+})
+.join(" ");
 
 
 
 
 
-
-
-
-
+tableEl.innerHTML+=finalData;
 
 }else{
-  console.log("Appointment not scheduled");
+  console.log("No appointments yet!");
 }
-
-
-
-
 }
+getAllDatas();
+
+
+
+
+
 
