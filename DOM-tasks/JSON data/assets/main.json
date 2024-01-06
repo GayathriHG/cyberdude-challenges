@@ -1,0 +1,71 @@
+[
+    {
+        "id": "1",
+        "name": "",
+        "pseudonym": "",
+        "age": "",
+        "works": [],
+        "recogination": []
+    },
+    {
+        "id": "2",
+        "name": "",
+        "pseudonym": "",
+        "age": "",
+        "works": [],
+        "recogination": []
+    },
+    {
+        "id": "3",
+        "name": "",
+        "pseudonym": "",
+        "age": "",
+        "works": [],
+        "recogination": []
+    },
+    {
+        "id": "4",
+        "name": "",
+        "pseudonym": "",
+        "age": "",
+        "works": [],
+        "recogination": []
+    },
+    {
+        "id": "5",
+        "name": "",
+        "pseudonym": "",
+        "age": "",
+        "works": [],
+        "recogination": []
+    },
+    {
+        "id": "6",
+        "name": "",
+        "pseudonym": "",
+        "age": "",
+        "works": [],
+        "recogination": []
+    },
+    {
+        "id": "7",
+        "name": "",
+        "pseudonym": "",
+        "age": "",
+        "works": [
+            "Harry Potter Series",
+            "Fantastic Beasts and Where to Find Them",
+            "areer of Evil",
+            "Lethal White",
+            "The Silk Worm",
+            "The Casual Vacancy",
+            "The Christmas Pig",
+            "The Ickabog",
+            "Troubled Blood",
+            "The Cukoo's Calling",
+            "The Ink Black Heart",
+            "The Running Grave"
+        ],
+        "recogination": []
+    }
+]

@@ -100,25 +100,21 @@ validateForm.onSuccess(() => {
   formEl.reset();
 });
 
-function getAllDatas(){
-  const storedData=localStorage.getItem("petData");
+function getAllDatas() {
+  const storedData = localStorage.getItem("petData");
 
- const storedDataArr= JSON.parse(storedData);
+  const storedDataArr = JSON.parse(storedData);
 
- const petCardTable=document.getElementById("petCard");
+  const petCardTable = document.getElementById("petCard");
 
- if(storedDataArr && storedDataArr.length>0){
-petCardTable.classList.remove("hidden");
+  if (storedDataArr && storedDataArr.length > 0) {
+    petCardTable.classList.remove("hidden");
 
+    const tableEl = document.getElementById("petTable");
 
-
- 
-
-const tableEl= document.getElementById('petTable');
-
-
-const finalData=storedDataArr.map(storedData=>{
-  return`
+    const finalData = storedDataArr
+      .map((storedData) => {
+        return `
   <tr>
   <td class="px-2 py-2 border ">${storedData.name}</td>
   <td class="px-2 py-2 border ">${storedData.gender}</td>
@@ -138,24 +134,14 @@ const finalData=storedDataArr.map(storedData=>{
   </tr>
   
   `;
-})
-.join(" ");
+      })
+      .join(" ");
 
-
-
-
-
-tableEl.innerHTML+=finalData;
-
-}else{
-  petCardTable.classList.add("hidden")
-  console.log("No appointments yet!");
+    tableEl.innerHTML += finalData;
+  } else {
+    petCardTable.classList.add("hidden");
+    console.log("No appointments yet!");
+  }
 }
-}
+
 getAllDatas();
-
-
-
-
-
-
