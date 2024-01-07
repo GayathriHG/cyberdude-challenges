@@ -1,12 +1,12 @@
-import books from "../assets/books.json"
+import books from "../assets/books.json";
+ const booksListEl=document.getElementById("#booksList");
 
-const authorListEl=document.getElementById("book")
-
-books.forEach((author)=>{
-    const divEl=document.createElement
-    ("div");
-    divEl.className=
-    "max-w-sm border-2 outline-none rounded relative";divEl.innerHTML=`
-    <div name=${authorListEl.name}`
+ for(const author of books){
+booksListEl.innerText += author
     
-})
+    // console.log(author.name);
+ }
+
+
+
+ 
