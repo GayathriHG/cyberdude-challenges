@@ -1,6 +1,7 @@
 [
     {
         "id": "1",
+        "image":"./images/JaneAusten.webp",
         "name": "Jane Austen",
         "about": "Jane Austen was an English novelist known primarily for her six novels, which implicitly interpret, critique, and comment upon the British landed gentry at the end of the 18th century. Austen's plots often explore the dependence of women on marriage for the pursuit of favourable social standing and economic security.",
         "age": "41 (1775–1817)",
@@ -19,6 +20,7 @@
     },
     {
         "id": "2",
+        "image":"./images/JefferyArcher.jpg",
         "name": "Jeffery Archer",
         "about": "Jeffrey Howard Archer, Baron Archer of Weston-super-Mare is an English novelist, life peer, convicted criminal, and former elected politician who remains a member of the House of Lords",
         "age": "83",
@@ -37,6 +39,7 @@
     },
     {
         "id": "3",
+        "image":"./images/ArundhatiRoy.jpg",
         "name": "Arundhati Roy",
         "about": "Suzanna Arundhati Roy is an Indian author best known for her novel The God of Small Things, which won the Booker Prize for Fiction in 1997 and became the best-selling book by a non-expatriate Indian author. She is also a political activist involved in human rights and environmental causes.",
         "age": "62",
@@ -58,6 +61,7 @@
     },
     {
         "id": "4",
+        "images":"./images/JKRowling.jpg",
         "name": "J. K. Rowling",
         "about": "Joanne Rowling CH OBE FRSL, better known by her pen name J. K. Rowling, is a British author and philanthropist. She wrote Harry Potter, a seven-volume fantasy series published from 1997 to 2007",
         "age": "58",
