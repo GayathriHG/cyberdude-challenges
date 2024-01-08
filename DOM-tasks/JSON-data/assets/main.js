@@ -1,12 +1,6 @@
 import books from "../assets/books.json";
- const booksListEl=document.getElementById("#booksList");
+const listEl = document.querySelector("#list");
 
- for(const author of books){
-booksListEl.innerText += author
-    
-    // console.log(author.name);
- }
-
-
-
- 
+for (const author of books) {
+  listEl.innerHTML += `<li class="books-list">${author.name}</li>`;
+}
