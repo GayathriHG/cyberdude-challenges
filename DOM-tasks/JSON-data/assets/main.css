@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-.books-list{
-    @apply bg-amber-100 shadow p-5 my-5 rounded max-w-4xl mx-auto 
-}
