@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml"
     href="https://png.pngtree.com/png-clipart/20190516/original/pngtree-youtube-logo-icon-png-image_3560543.jpg" />
-  <title>Thumbnail Downloader</title>
-  <script type="module" crossorigin src="./assets/index-gccOmYst.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-X6ne_veq.css">
+  <title>Thumbnail Viewer</title>
+  <script type="module" crossorigin src="./assets/index-uFKmP-2c.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-pR8--ekb.css">
 </head>
 
 <body class="bg-red-600 font-mono">
@@ -21,16 +21,20 @@
         Get the thumbnail you want !!
       </h4>
     </div>
-    <div>
+    <form id="form">
 
-      <input type="text" placeholder="Enter your URL" class="bg-slate-200 px-4 py-2 w-full rounded outline-none">
+      <input type="text" id="url" placeholder="Enter your URL" required class="bg-slate-200 px-4 py-2 w-full rounded outline-none">
 
       <div class="text-center">
         <button class="bg-red-500 text-white rounded mt-6 px-2 py-2 items-center hover:bg-red-600 cursor-pointer">Get
           Thumbnail</button>
       </div>
-    </div>
+    </form>
     
+  </div>
+  <div class="mt-20 items-center max-w-xl mx-auto mb-10" id="yourImg">
+    <h4 class="text-white mb-6">your Thumbnail</h4>
+    <img src="https://i.ytimg.com/vi/[VIDEO_ID]/maxresdefault.jpg" id="output" alt="your thumbnail">
   </div>
   
 
