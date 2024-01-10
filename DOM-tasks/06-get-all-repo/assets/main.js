@@ -23,11 +23,11 @@ const interns=[
 ]
 
 
-interns.forEach(name => {
+interns.forEach(username => {
     // console.log(name);
 
-    const api=`https://api.github.com/users/${name}`;
-    // console.log(api);
+    const api=`https://api.github.com/users/${username}/repos`;
+    console.log(api);
 
     
 });
