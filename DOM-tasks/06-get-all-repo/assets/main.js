@@ -37,7 +37,9 @@ interns.forEach((name) => {
         spanEl.innerHTML = `<div class="border p-6  rounded bg-white">
   <img src="${data.avatar_url}" alt="profile image" class="w-12 h-12 rounded-full" id="image">
   <h4 class="mt-2" id="name">${data.name}</h4>
-  <button class="bg-red-300 hover:bg-red-400 cursor-pointer rounded px-2 py-1 mt-2" id="button"><a href="${data.repos_url}"> View Repositories</a></button>
+  <button class="bg-red-300 hover:bg-red-400 cursor-pointer rounded px-2 py-1 mt-2" id="button"><a href="${data.repos_url}" target="blank"> View Repositories</a></button>
+  <button class="bg-red-300 hover:bg-red-400 cursor-pointer rounded px-2 py-1 mt-2" id="button"><a href="${data.html_url}" target="blank"> View Profile</a></button>
+
   </div>`;
         gitEl.append(spanEl);
       });
