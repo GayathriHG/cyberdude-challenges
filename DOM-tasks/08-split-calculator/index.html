@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/main.css">
-  <title>Split Bills-Home</title>
+  <title>Split Bills</title>
 </head>
 
 <body class="bg-cyan-900">
@@ -31,7 +31,7 @@
                 </g>
               </svg></a>
           </div>
-          <div>
+          <!-- <div>
             <a href="./history.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                 class="text-yellow-100 hover:text-cyan-900 cursor-pointer">
                 <path fill="currentColor"
@@ -39,7 +39,7 @@
                 <path fill="currentColor"
                   d="M12.5 7.25a.75.75 0 0 0-1.5 0v5.5c0 .27.144.518.378.651l3.5 2a.75.75 0 0 0 .744-1.302L12.5 12.315z" />
               </svg></a>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -88,6 +88,29 @@
               class=" px-4 py-2 rounded outline-none w-full">
           </div>
         </div>
+        <div class="text-center p-2 m-2 flex items-center space-x-2">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+              class="text-gray-500 mt-2 mx-1 outline-none">
+              <path fill="currentColor"
+                d="M15.308 15.692h3.384v-3.384h-.884v2.5h-2.5zM12 14.385q.98 0 1.683-.702q.702-.702.702-1.683q0-.98-.702-1.683q-.702-.702-1.683-.702q-.98 0-1.683.702q-.702.702-.702 1.683q0 .98.702 1.683q.702.702 1.683.702m-6.692-2.693h.884v-2.5h2.5v-.884H5.308zM3 18V6h18v12zm1-1h16V7H4zm0 0V7z" />
+            </svg>
+          </div>
+          <div class="w-full">
+            <select name="Select Currency" class="text-gray-400 w-full px-4 py-2" id="currency" required
+              class=" px-4 py-2 rounded outline-none w-full">
+              <option value="Select Currency">Select Currency</option>
+              <option value="USD">USD </option>
+              <option value="USD">EUR</option>
+              <option value="USD">YEN</option>
+              <option value="USD">INR</option>
+              <option value="USD">KRW</option>
+              <option value="USD">NZD</option>
+              <option value="USD">AED</option>
+            </select>
+
+          </div>
+        </div>
         <!--button-->
         <div class="flex items-center justify-evenly">
           <div
@@ -95,11 +118,11 @@
             <button class=" px-4 py-2  " id="calculate" type="submit">Calculate my share.</button>
 
           </div>
-          <!-- <div
+          <div
             class=" bg-cyan-700 hover:bg-cyan-600 cursor-pointer text-yellow-100  rounded  flex items-center justify-center mx-4 mt-4 mb-4 ">
             <button class=" px-4 py-2  " id="reset" type="reset">Reset</button>
 
-          </div> -->
+          </div>
         </div>
 
       </form>
@@ -107,6 +130,23 @@
     </div>
   </div>
 
+
+  </div>
+  <div id="history" class="max-w-xl mx-auto bg-yellow-100 text-cyan-800 rounded">
+    <table class="mt-10 text-center px-2 py-2 table table-fixed border w-full rounded" id="billTable">
+      <tr>
+        <!-- <th class="px-2 py-1 border">Sl.no</th> -->
+        <th class="px-2 py-1 border">Total Amount</th>
+        <th class="px-2 py-1 border">Total no. of people</th>
+        <th class="px-2 py-1 border">Your Share is</th>
+      </tr>
+      <tr>
+        <!-- <td class="px-2 py-1 border">01</td> -->
+        <!-- <td class="px-2 py-1 border">1000</td>
+            <td class="px-2 py-1 border">3</td>
+            <td class="px-2 py-1 border">333.33</td> -->
+      </tr>
+    </table>
 
   </div>
 
