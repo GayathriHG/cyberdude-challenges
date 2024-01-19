@@ -1,25 +1,18 @@
-const formEl = document.querySelector("form");
-const amountEl = document.querySelector("#amount");
+const formEl = document.getElementById("form");
+console.log(formEl);
 
-const peopleEl = document.querySelector("#people");
-const calculateEl = document.querySelector("#calculate");
-const resetEl = document.querySelector("#reset");
-const resultEl = document.querySelector("#result");
-const historyEl = document.querySelector("#history");
+const calculateEl = document.getElementById("calculate");
+console.log(calculateEl);
 
-
-
-
-calculateEl.addEventListener("click",(e)=>{
-    e.preventDefault();
-const amount=parseInt(amountEl.value);
-const people=parseInt(peopleEl.value);
-const share=amount/people;
-
-resultEl.textContent=`your share is: ₹
-${share}
-`
-
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const amountEl = document.getElementById("amount").value;
+  console.log(amountEl);
+  const peopleEl = document.getElementById("people").value;
+  console.log(peopleEl);
+  const splitEl = amountEl / peopleEl;
+  console.log(splitEl);
+  const resultEl = document.getElementById("result");
+  resultEl.innerText = `your share is : ₹ ${splitEl}`;
+  console.log(resultEl);
 });
-
-

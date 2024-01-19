@@ -47,11 +47,11 @@
       <div class="bg-cyan-600 rounded">
 
       </div>
-      <form class="mt-6" >
+      <form class="mt-6" id="form" method="post">
         <!--amount-->
         <div class="text-center p-2 m-2 flex items-center space-x-2">
 
-          
+
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" class="text-gray-500 mx-1 mt-2" height="32"
               viewBox="0 0 24 24">
@@ -66,8 +66,8 @@
               </g>
             </svg>
           </div>
-          <div class="w-full " >
-            <input type="number" id="amount" placeholder="Enter the total amount" required
+          <div class="w-full ">
+            <input type="number" name="amount" id="amount" placeholder="Enter the total amount" required
               class=" px-4 py-2 rounded outline-none w-full ">
           </div>
         </div>
@@ -75,7 +75,7 @@
         <div class="text-center p-2 m-2 flex items-center space-x-2">
 
 
-          
+
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-gray-500 mt-2 mx-1 "
               viewBox="0 0 20 20">
@@ -84,27 +84,28 @@
             </svg>
           </div>
           <div class="w-full">
-            <input type="number" id="people" placeholder="How many people ?" required class=" px-4 py-2 rounded outline-none w-full">
+            <input type="number" name="people" id="people" placeholder="How many people ?" required
+              class=" px-4 py-2 rounded outline-none w-full">
           </div>
         </div>
         <!--button-->
         <div class="flex items-center justify-evenly">
           <div
             class=" bg-cyan-700 hover:bg-cyan-600 cursor-pointer text-yellow-100  rounded  flex items-center justify-center mx-4 mt-4 mb-4 ">
-            <button class=" px-4 py-2  " id="calculate">Calculate my share.</button>
+            <button class=" px-4 py-2  " id="calculate" type="submit">Calculate my share.</button>
 
           </div>
           <div
             class=" bg-cyan-700 hover:bg-cyan-600 cursor-pointer text-yellow-100  rounded  flex items-center justify-center mx-4 mt-4 mb-4 ">
-            <button  class=" px-4 py-2  " id="reset">Reset</button>
+            <button class=" px-4 py-2  " id="reset" type="reset">Reset</button>
 
           </div>
         </div>
       </form>
       <!--output-->
-      <div class="mt-2 text-center" id="result">
-       
-        
+      <div class="mt-2 text-center" name="split" id="result">
+
+
       </div>
     </div>
   </div>
