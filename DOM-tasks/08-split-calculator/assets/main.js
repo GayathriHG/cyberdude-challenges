@@ -1,7 +1,7 @@
 import JustValidate from "just-validate";
 
 const formEl = document.getElementById("bill-split-form");
-const calculateEl = document.getElementById("calculate");
+// const calculateEl = document.getElementById("calculate");
 
 const validateForm = new JustValidate(formEl, {
   validateBeforeSubmitting: true,
@@ -19,6 +19,12 @@ validateForm.addField("#amount", [
       errorMessage: "Enter the total no. of people.",
     },
   ]);
+validateForm.addField("#currency", [
+  {
+    rule: "required",
+    errorMessage: "select a currency.",
+  },
+]);
 
 validateForm.onSuccess(() => {
   const formData = new FormData(formEl);
@@ -61,6 +67,8 @@ formEl.addEventListener("submit", (e) => {
   // console.log(peopleEl);
   const splitEl = amountEl / peopleEl;
   console.log(splitEl);
+  const shareEl = document.getElementById("share");
+  shareEl.innerHTML = `Your Share is:${splitEl}`;
 });
 
 function getAllBills() {
@@ -78,8 +86,8 @@ function getAllBills() {
             
             <td class="px-2 py-1 border">${splitBills.amount}</td>
             <td class="px-2 py-1 border">${splitBills.people}</td>
+            <td class="px-2 py-1 border">${splitBills.currency}</td>
 
-            <td class="px-2 py-1 border"></td>
            
         </tr>
             
