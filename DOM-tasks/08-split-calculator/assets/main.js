@@ -1,11 +1,32 @@
-const formEl = document.getElementById("form");
-console.log(formEl);
+import JustValidate from "just-validate";
 
+const formEl = document.getElementById("bill-split-form");
 const calculateEl = document.getElementById("calculate");
-console.log(calculateEl);
 
+const validateForm = new JustValidate(formEl, {
+  validateBeforeSubmitting: true,
+});
+
+validateForm.addField("#amount", [
+  {
+    rule: "required",
+    errorMessage: "Enter the total amount.",
+  },
+]),
+  validateForm.addField("#people", [
+    {
+      rule: "required",
+      errorMessage: "Enter the total no. of people.",
+    },
+  ]);
+
+validateForm.onSuccess(() => {
+  const formData = new FormData(formEl);
+  const formValueObj = Object.fromEntries(formData.entries());
+});
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
+
   const amountEl = document.getElementById("amount").value;
   console.log(amountEl);
   const peopleEl = document.getElementById("people").value;
@@ -13,6 +34,4 @@ formEl.addEventListener("submit", (e) => {
   const splitEl = amountEl / peopleEl;
   console.log(splitEl);
   const resultEl = document.getElementById("result");
-  resultEl.innerText = `your share is : ₹ ${splitEl}`;
-  console.log(resultEl);
 });
