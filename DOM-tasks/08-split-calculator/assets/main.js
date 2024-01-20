@@ -3,6 +3,8 @@ import JustValidate from "just-validate";
 const formEl = document.getElementById("bill-split-form");
 // const calculateEl = document.getElementById("calculate");
 
+const currencyEl = document.getElementById("currency");
+
 const validateForm = new JustValidate(formEl, {
   validateBeforeSubmitting: true,
 });
@@ -69,6 +71,28 @@ formEl.addEventListener("submit", (e) => {
   console.log(splitEl);
   const shareEl = document.getElementById("share");
   shareEl.innerHTML = `Your Share is:${splitEl}`;
+
+  // const splitDataObj={
+  //   totalAmount:amountEl.value,
+  //   noOfPeople:peopleEl.value,
+  //   currency:currencyEl.value,
+  //   yourShare:splitEl
+
+  // }
+  // const newBill=[];
+
+  // const storedSplitBill=localStorage.getItem("splitBillData");
+
+  // const storedSplitArray=(JSON.parse(storedSplitBill))
+
+  // if(storedSplitArray){
+  //   storedSplitArray.push(splitDataObj)
+
+  //   localStorage.setItem("splitBillData",JSON.stringify(storedSplitArray))
+  // }else{
+  //   newBill.push(splitDataObj)
+  //   localStorage.setItem("splitBillData",JSON.stringify(newBill))
+  // }
 });
 
 function getAllBills() {
@@ -87,6 +111,7 @@ function getAllBills() {
             <td class="px-2 py-1 border">${splitBills.amount}</td>
             <td class="px-2 py-1 border">${splitBills.people}</td>
             <td class="px-2 py-1 border">${splitBills.currency}</td>
+            
 
            
         </tr>
