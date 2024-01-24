@@ -1,4 +1,8 @@
-const sectionEl = document.querySelector("section");
+const sectionEl = document.querySelector("section ");
+
+const buttonEl = document.querySelector("button");
+
+// buttonEl.style.display="none";
 
 // const URL="https://api.adviceslip.com/advice"
 
@@ -12,13 +16,27 @@ quotes.onreadystatechange = function () {
 };
 quotes.open("GET", "https://api.adviceslip.com/advice");
 quotes.send();
+buttonEl.addEventListener("click", () => {
+  window.location.href = "/";
+});
 
-
-// const result=fetch(URL).then((data)=>{
-  
-  
-// console.log(jsonData);
-// });
+// const result=fetch(URL).then((response)=>{
+//   return response.json();
+// })
+// .then(data => console.log(data))
+// .catch()
 // console.log(result);
+// sectionEl.textContent=result
 
+// async function getAdviseData(){
+//   try{
+//     const response = await fetch(URL);
+//     const jsonData=await response.json();
+//     console.log("My Advice:",jsonData);
+//   }catch(error){
+// console.log("Oops! error");
+//   }
+// }
+//  getAdviseData();
 
+// sectionEl.textContent= getAdviseData.slip.advice
