@@ -4,11 +4,14 @@
  const yourImgEl=document.querySelector("#yourImg");
 //  console.log(urlEl,yourUrlEl);
 
+// yourImgEl.style.display="none"
  addEventListener("submit",(e)=>{
 e.preventDefault();
 
 
 function getThumbnail(url){
+
+
     const regex=/[?&]v=([^&]+)/;
     const match = url.match(regex);
     if(match){

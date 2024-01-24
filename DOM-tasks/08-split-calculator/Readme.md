@@ -18,7 +18,7 @@ Splitting bills made easier.
 npm run dev
 ```
 
-Just run and visit http://localhost:5173
+
 
 ### Build
 
