@@ -12,7 +12,7 @@ const handleSubmit = (event) => {
   event.preventDefault();
 
   const { fullName, email, subject, message } = formEl.elements;
-// getting output in console
+  // getting output in console
   const formData = new FormData(formEl);
   formData.delete("type");
   for (let entry of formData.entries()) {
@@ -20,6 +20,7 @@ const handleSubmit = (event) => {
   }
 
   alert("Thank you for your feedback!");
+  formEl.reset();
 };
 // getting radio input as subject input
 formEl.addEventListener("submit", handleSubmit);

@@ -124,10 +124,7 @@ function getAllDatas() {
   <td class="px-2 py-2 border ">${storedData.date}</td>
   
   
-  <td class="px-2 py-2 border "><button class="px-6 py-2 bg-fuchsia-600 rounded">
-  Edit
-  </button>
-  </td>
+  
   
   <td class="px-2 py-2 border "><button class="px-6 py-2 rounded bg-red-600">Cancel</button>
   </td>
