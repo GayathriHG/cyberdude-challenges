@@ -19,7 +19,6 @@ quotes.onreadystatechange = function () {
 quotes.open("GET", "https://api.adviceslip.com/advice");
 quotes.send();
 
-
 // const result=fetch(URL).then((response)=>{
 //   return response.json();
 // })
