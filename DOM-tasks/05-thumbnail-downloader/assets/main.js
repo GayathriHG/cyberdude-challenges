@@ -4,7 +4,7 @@ const urlEl = document.querySelector("#url");
 const yourImgEl = document.querySelector("#yourImg");
 //  console.log(urlEl,yourUrlEl);
 
-// yourImgEl.style.display="none"
+yourImgEl.style.display = "hidden";
 addEventListener("submit", (e) => {
   e.preventDefault();
 

@@ -11,7 +11,7 @@ this.status === 200){
 
     }else{
         ipAddressPlaceholderEl.innerText="IP address not found";
-    }
+    } 
 };
 
 
